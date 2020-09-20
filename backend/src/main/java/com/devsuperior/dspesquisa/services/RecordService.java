@@ -5,6 +5,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -46,4 +48,12 @@ public class RecordService {
 		entity = recordRepositorie.save(entity);
 		return new RecordDTO(entity);
 	}
+
+	public Page<RecordDTO> findByMoments(Instant dtMin, Instant dtMax, PageRequest pageRequest) {		
+		return recordRepositorie.findByMoments(dtMin, dtMax, pageRequest).map(x -> new RecordDTO(x));
+	}
+	
+	
+
+	
 }
