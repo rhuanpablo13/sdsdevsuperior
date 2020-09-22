@@ -21,7 +21,7 @@ const initialPieData = {
     series: []
 }
 
-const BASE_URL = 'https://sds1-rhuan.herokuapp.com';
+const BASE_URL = 'https://rhuandevsuperior.netlify.app';
 
 const Charts = () => {
     const [barChartData, setBarChartData] = useState<BarChartData[]>([]);
