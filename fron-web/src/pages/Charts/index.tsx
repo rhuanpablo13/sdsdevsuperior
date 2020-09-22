@@ -21,7 +21,7 @@ const initialPieData = {
     series: []
 }
 
-const BASE_URL = 'https://rhuandevsuperior.netlify.app';
+const BASE_URL = 'https://rhuandev.netlify.app';
 
 const Charts = () => {
     const [barChartData, setBarChartData] = useState<BarChartData[]>([]);
